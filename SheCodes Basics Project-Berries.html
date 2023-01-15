@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Berries</title>
+    <style>
+      body {
+        background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+      }
+
+      h1 {
+        text-align: center;
+        color: #7e36a5;
+      }
+
+      h2 {
+        text-align: center;
+        border: 1px dotted #7e36a5;
+        padding: 15px;
+        border-radius: 5px;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 80%;
+        border-radius: 5px;
+      }
+
+      p {
+        line-height: 1.5;
+        margin: 20px 0 10px;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        background: #7e36a5;
+        color: white;
+        font-size: 25px;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+        transition: all 180ms ease-in-out;
+      }
+
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+
+      .container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px 40px;
+      }
+
+      .healthline {
+        display: block;
+        margin-top: 11px;
+        color: #7e36a5;
+        text-decoration: none;
+        font-size: 15px;
+        padding-bottom: 15px;
+      }
+
+      .healthline:hover {
+        text-decoration: underline;
+      }
+
+      .footer-p {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Berries</h1>
+      <h2>Health benefits of berries</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/059/510/original/Berries3-shutterstock.jpg?1671399521"
+        alt="Berries"
+      />
+      <p>
+        <strong>Berries</strong> are among the healthiest foods you can eat.
+        They’re delicious, nutritious, and provide a number of impressive health
+        benefits.<br />
+        <em>Here are 11 good reasons to include berries in your diet.</em>
+        <br />
+      </p>
+      <a
+        href="https://www.healthline.com/nutrition/11-reasons-to-eat-berries"
+        target="_blank"
+        class="healthline"
+        >Visit Healthline to learn more</a
+      >
+      <button class="shop-button">Shop Now</button>
+      <p class="footer-p">This Page was built by Anuli Edom</p>
+    </div>
+    <script>
+      function shop() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        let fruit = prompt("What is your favorite berry?");
+
+        if (
+          fruit === "blueberry" ||
+          fruit === "blackberry" ||
+          fruit === "strawberry"
+        ) {
+          alert(
+            "Thank you " +
+              name +
+              ", We love " +
+              fruit +
+              ". Please Check your email! "
+          );
+        } else {
+          alert("Thank you " + name + ". Berries are good for you");
+        }
+      }
+      let shopButton = document.querySelector(".shop-button");
+      shopButton.addEventListener("click", shop);
+    </script>
+  </body>
+</html>
